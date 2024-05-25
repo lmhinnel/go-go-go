@@ -1,0 +1,1009 @@
+2024-05-25 17:10:58,165 p=175410 u=lmhinnoc n=ansible | Using /home/lmhinnoc/Documents/vdt/midterm/ansible.cfg as config file
+2024-05-25 17:10:58,328 p=175410 u=lmhinnoc n=ansible | PLAY [Setup project] ************************************************************************************************
+2024-05-25 17:10:58,333 p=175410 u=lmhinnoc n=ansible | TASK [common : Ensure docker service is running] ********************************************************************
+2024-05-25 17:10:59,388 p=175410 u=lmhinnoc n=ansible | ok: [go_go_2] => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"}, "changed": false, "enabled": true, "name": "docker", "state": "started", "status": {"ActiveEnterTimestamp": "Sat 2024-05-25 08:37:44 UTC", "ActiveEnterTimestampMonotonic": "77746758", "ActiveExitTimestampMonotonic": "0", "ActiveState": "active", "After": "sysinit.target time-set.target system.slice basic.target firewalld.service containerd.service network-online.target docker.socket systemd-journald.socket", "AllowIsolate": "no", "AmbientCapabilities": "", "AssertResult": "yes", "AssertTimestamp": "Sat 2024-05-25 08:37:43 UTC", "AssertTimestampMonotonic": "76390869", "Before": "shutdown.target multi-user.target", "BlockIOAccounting": "no", "BlockIOWeight": "[not set]", "CPUAccounting": "no", "CPUQuotaPerSecUSec": "infinity", "CPUSchedulingPolicy": "0", "CPUSchedulingPriority": "0", "CPUSchedulingResetOnFork": "no", "CPUShares": "[not set]", "CPUUsageNSec": "[not set]", "CPUWeight": "[not set]", "CacheDirectoryMode": "0755", "CanIsolate": "no", "CanReload": "yes", "CanStart": "yes", "CanStop": "yes", "CapabilityBoundingSet": "cap_chown cap_dac_override cap_dac_read_search cap_fowner cap_fsetid cap_kill cap_setgid cap_setuid cap_setpcap cap_linux_immutable cap_net_bind_service cap_net_broadcast cap_net_admin cap_net_raw cap_ipc_lock cap_ipc_owner cap_sys_module cap_sys_rawio cap_sys_chroot cap_sys_ptrace cap_sys_pacct cap_sys_admin cap_sys_boot cap_sys_nice cap_sys_resource cap_sys_time cap_sys_tty_config cap_mknod cap_lease cap_audit_write cap_audit_control cap_setfcap cap_mac_override cap_mac_admin cap_syslog cap_wake_alarm cap_block_suspend", "CollectMode": "inactive", "ConditionResult": "yes", "ConditionTimestamp": "Sat 2024-05-25 08:37:43 UTC", "ConditionTimestampMonotonic": "76390869", "ConfigurationDirectoryMode": "0755", "Conflicts": "shutdown.target", "ControlGroup": "/system.slice/docker.service", "ControlPID": "0", "DefaultDependencies": "yes", "Delegate": "yes", "DelegateControllers": "cpu cpuacct io blkio memory devices pids", "Description": "Docker Application Container Engine", "DevicePolicy": "auto", "Documentation": "https://docs.docker.com", "DynamicUser": "no", "ExecMainCode": "0", "ExecMainExitTimestampMonotonic": "0", "ExecMainPID": "4483", "ExecMainStartTimestamp": "Sat 2024-05-25 08:37:43 UTC", "ExecMainStartTimestampMonotonic": "76392002", "ExecMainStatus": "0", "ExecReload": "{ path=/bin/kill ; argv[]=/bin/kill -s HUP $MAINPID ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", "ExecStart": "{ path=/usr/bin/dockerd ; argv[]=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", "FailureAction": "none", "FileDescriptorStoreMax": "0", "FragmentPath": "/lib/systemd/system/docker.service", "GID": "[not set]", "GuessMainPID": "yes", "IOAccounting": "no", "IOSchedulingClass": "0", "IOSchedulingPriority": "0", "IOWeight": "[not set]", "IPAccounting": "no", "IPEgressBytes": "18446744073709551615", "IPEgressPackets": "18446744073709551615", "IPIngressBytes": "18446744073709551615", "IPIngressPackets": "18446744073709551615", "Id": "docker.service", "IgnoreOnIsolate": "no", "IgnoreSIGPIPE": "yes", "InactiveEnterTimestampMonotonic": "0", "InactiveExitTimestamp": "Sat 2024-05-25 08:37:43 UTC", "InactiveExitTimestampMonotonic": "76392024", "InvocationID": "478cae080e504105a2a58ee5c5909287", "JobRunningTimeoutUSec": "infinity", "JobTimeoutAction": "none", "JobTimeoutUSec": "infinity", "KeyringMode": "private", "KillMode": "process", "KillSignal": "15", "LimitAS": "infinity", "LimitASSoft": "infinity", "LimitCORE": "infinity", "LimitCORESoft": "infinity", "LimitCPU": "infinity", "LimitCPUSoft": "infinity", "LimitDATA": "infinity", "LimitDATASoft": "infinity", "LimitFSIZE": "infinity", "LimitFSIZESoft": "infinity", "LimitLOCKS": "infinity", "LimitLOCKSSoft": "infinity", "LimitMEMLOCK": "67108864", "LimitMEMLOCKSoft": "67108864", "LimitMSGQUEUE": "819200", "LimitMSGQUEUESoft": "819200", "LimitNICE": "0", "LimitNICESoft": "0", "LimitNOFILE": "infinity", "LimitNOFILESoft": "infinity", "LimitNPROC": "infinity", "LimitNPROCSoft": "infinity", "LimitRSS": "infinity", "LimitRSSSoft": "infinity", "LimitRTPRIO": "0", "LimitRTPRIOSoft": "0", "LimitRTTIME": "infinity", "LimitRTTIMESoft": "infinity", "LimitSIGPENDING": "3838", "LimitSIGPENDINGSoft": "3838", "LimitSTACK": "infinity", "LimitSTACKSoft": "8388608", "LoadState": "loaded", "LockPersonality": "no", "LogLevelMax": "-1", "LogsDirectoryMode": "0755", "MainPID": "4483", "MemoryAccounting": "no", "MemoryCurrent": "[not set]", "MemoryDenyWriteExecute": "no", "MemoryHigh": "infinity", "MemoryLimit": "infinity", "MemoryLow": "0", "MemoryMax": "infinity", "MemorySwapMax": "infinity", "MountAPIVFS": "no", "MountFlags": "", "NFileDescriptorStore": "0", "NRestarts": "0", "Names": "docker.service", "NeedDaemonReload": "no", "Nice": "0", "NoNewPrivileges": "no", "NonBlocking": "no", "NotifyAccess": "main", "OOMScoreAdjust": "-500", "OnFailureJobMode": "replace", "PermissionsStartOnly": "no", "Perpetual": "no", "PrivateDevices": "no", "PrivateNetwork": "no", "PrivateTmp": "no", "PrivateUsers": "no", "ProtectControlGroups": "no", "ProtectHome": "no", "ProtectKernelModules": "no", "ProtectKernelTunables": "no", "ProtectSystem": "no", "RefuseManualStart": "no", "RefuseManualStop": "no", "RemainAfterExit": "no", "RemoveIPC": "no", "Requires": "system.slice sysinit.target docker.socket", "Restart": "always", "RestartUSec": "2s", "RestrictNamespaces": "no", "RestrictRealtime": "no", "RestrictSUIDSGID": "no", "Result": "success", "RootDirectoryStartOnly": "no", "RuntimeDirectoryMode": "0755", "RuntimeDirectoryPreserve": "no", "RuntimeMaxUSec": "infinity", "SameProcessGroup": "no", "SecureBits": "0", "SendSIGHUP": "no", "SendSIGKILL": "yes", "Slice": "system.slice", "StandardError": "inherit", "StandardInput": "null", "StandardInputData": "", "StandardOutput": "journal", "StartLimitAction": "none", "StartLimitBurst": "3", "StartLimitIntervalUSec": "1min", "StartupBlockIOWeight": "[not set]", "StartupCPUShares": "[not set]", "StartupCPUWeight": "[not set]", "StartupIOWeight": "[not set]", "StateChangeTimestamp": "Sat 2024-05-25 08:37:44 UTC", "StateChangeTimestampMonotonic": "77746758", "StateDirectoryMode": "0755", "StatusErrno": "0", "StopWhenUnneeded": "no", "SubState": "running", "SuccessAction": "none", "SyslogFacility": "3", "SyslogLevel": "6", "SyslogLevelPrefix": "yes", "SyslogPriority": "30", "SystemCallErrorNumber": "0", "TTYReset": "no", "TTYVHangup": "no", "TTYVTDisallocate": "no", "TasksAccounting": "yes", "TasksCurrent": "56", "TasksMax": "infinity", "TimeoutStartUSec": "infinity", "TimeoutStopUSec": "1min 30s", "TimerSlackNSec": "50000", "Transient": "no", "TriggeredBy": "docker.socket", "Type": "notify", "UID": "[not set]", "UMask": "0022", "UnitFilePreset": "enabled", "UnitFileState": "enabled", "UtmpMode": "init", "WantedBy": "multi-user.target", "Wants": "network-online.target containerd.service", "WatchdogTimestamp": "Sat 2024-05-25 08:37:44 UTC", "WatchdogTimestampMonotonic": "77746755", "WatchdogUSec": "0"}}
+2024-05-25 17:10:59,390 p=175410 u=lmhinnoc n=ansible | ok: [go_go_1] => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"}, "changed": false, "enabled": true, "name": "docker", "state": "started", "status": {"ActiveEnterTimestamp": "Sat 2024-05-25 08:39:56 UTC", "ActiveEnterTimestampMonotonic": "109898780", "ActiveExitTimestampMonotonic": "0", "ActiveState": "active", "After": "firewalld.service docker.socket systemd-journald.socket system.slice network-online.target sysinit.target time-set.target containerd.service basic.target", "AllowIsolate": "no", "AmbientCapabilities": "", "AssertResult": "yes", "AssertTimestamp": "Sat 2024-05-25 08:39:55 UTC", "AssertTimestampMonotonic": "108892590", "Before": "multi-user.target shutdown.target", "BlockIOAccounting": "no", "BlockIOWeight": "[not set]", "CPUAccounting": "no", "CPUQuotaPerSecUSec": "infinity", "CPUSchedulingPolicy": "0", "CPUSchedulingPriority": "0", "CPUSchedulingResetOnFork": "no", "CPUShares": "[not set]", "CPUUsageNSec": "[not set]", "CPUWeight": "[not set]", "CacheDirectoryMode": "0755", "CanIsolate": "no", "CanReload": "yes", "CanStart": "yes", "CanStop": "yes", "CapabilityBoundingSet": "cap_chown cap_dac_override cap_dac_read_search cap_fowner cap_fsetid cap_kill cap_setgid cap_setuid cap_setpcap cap_linux_immutable cap_net_bind_service cap_net_broadcast cap_net_admin cap_net_raw cap_ipc_lock cap_ipc_owner cap_sys_module cap_sys_rawio cap_sys_chroot cap_sys_ptrace cap_sys_pacct cap_sys_admin cap_sys_boot cap_sys_nice cap_sys_resource cap_sys_time cap_sys_tty_config cap_mknod cap_lease cap_audit_write cap_audit_control cap_setfcap cap_mac_override cap_mac_admin cap_syslog cap_wake_alarm cap_block_suspend", "CollectMode": "inactive", "ConditionResult": "yes", "ConditionTimestamp": "Sat 2024-05-25 08:39:55 UTC", "ConditionTimestampMonotonic": "108892589", "ConfigurationDirectoryMode": "0755", "Conflicts": "shutdown.target", "ControlGroup": "/system.slice/docker.service", "ControlPID": "0", "DefaultDependencies": "yes", "Delegate": "yes", "DelegateControllers": "cpu cpuacct io blkio memory devices pids", "Description": "Docker Application Container Engine", "DevicePolicy": "auto", "Documentation": "https://docs.docker.com", "DynamicUser": "no", "ExecMainCode": "0", "ExecMainExitTimestampMonotonic": "0", "ExecMainPID": "3962", "ExecMainStartTimestamp": "Sat 2024-05-25 08:39:55 UTC", "ExecMainStartTimestampMonotonic": "108892920", "ExecMainStatus": "0", "ExecReload": "{ path=/bin/kill ; argv[]=/bin/kill -s HUP $MAINPID ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", "ExecStart": "{ path=/usr/bin/dockerd ; argv[]=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }", "FailureAction": "none", "FileDescriptorStoreMax": "0", "FragmentPath": "/lib/systemd/system/docker.service", "GID": "[not set]", "GuessMainPID": "yes", "IOAccounting": "no", "IOSchedulingClass": "0", "IOSchedulingPriority": "0", "IOWeight": "[not set]", "IPAccounting": "no", "IPEgressBytes": "18446744073709551615", "IPEgressPackets": "18446744073709551615", "IPIngressBytes": "18446744073709551615", "IPIngressPackets": "18446744073709551615", "Id": "docker.service", "IgnoreOnIsolate": "no", "IgnoreSIGPIPE": "yes", "InactiveEnterTimestampMonotonic": "0", "InactiveExitTimestamp": "Sat 2024-05-25 08:39:55 UTC", "InactiveExitTimestampMonotonic": "108892944", "InvocationID": "1eaa3d83af8d4a0d915285dad7539cbe", "JobRunningTimeoutUSec": "infinity", "JobTimeoutAction": "none", "JobTimeoutUSec": "infinity", "KeyringMode": "private", "KillMode": "process", "KillSignal": "15", "LimitAS": "infinity", "LimitASSoft": "infinity", "LimitCORE": "infinity", "LimitCORESoft": "infinity", "LimitCPU": "infinity", "LimitCPUSoft": "infinity", "LimitDATA": "infinity", "LimitDATASoft": "infinity", "LimitFSIZE": "infinity", "LimitFSIZESoft": "infinity", "LimitLOCKS": "infinity", "LimitLOCKSSoft": "infinity", "LimitMEMLOCK": "67108864", "LimitMEMLOCKSoft": "67108864", "LimitMSGQUEUE": "819200", "LimitMSGQUEUESoft": "819200", "LimitNICE": "0", "LimitNICESoft": "0", "LimitNOFILE": "infinity", "LimitNOFILESoft": "infinity", "LimitNPROC": "infinity", "LimitNPROCSoft": "infinity", "LimitRSS": "infinity", "LimitRSSSoft": "infinity", "LimitRTPRIO": "0", "LimitRTPRIOSoft": "0", "LimitRTTIME": "infinity", "LimitRTTIMESoft": "infinity", "LimitSIGPENDING": "3838", "LimitSIGPENDINGSoft": "3838", "LimitSTACK": "infinity", "LimitSTACKSoft": "8388608", "LoadState": "loaded", "LockPersonality": "no", "LogLevelMax": "-1", "LogsDirectoryMode": "0755", "MainPID": "3962", "MemoryAccounting": "no", "MemoryCurrent": "[not set]", "MemoryDenyWriteExecute": "no", "MemoryHigh": "infinity", "MemoryLimit": "infinity", "MemoryLow": "0", "MemoryMax": "infinity", "MemorySwapMax": "infinity", "MountAPIVFS": "no", "MountFlags": "", "NFileDescriptorStore": "0", "NRestarts": "0", "Names": "docker.service", "NeedDaemonReload": "no", "Nice": "0", "NoNewPrivileges": "no", "NonBlocking": "no", "NotifyAccess": "main", "OOMScoreAdjust": "-500", "OnFailureJobMode": "replace", "PermissionsStartOnly": "no", "Perpetual": "no", "PrivateDevices": "no", "PrivateNetwork": "no", "PrivateTmp": "no", "PrivateUsers": "no", "ProtectControlGroups": "no", "ProtectHome": "no", "ProtectKernelModules": "no", "ProtectKernelTunables": "no", "ProtectSystem": "no", "RefuseManualStart": "no", "RefuseManualStop": "no", "RemainAfterExit": "no", "RemoveIPC": "no", "Requires": "sysinit.target docker.socket system.slice", "Restart": "always", "RestartUSec": "2s", "RestrictNamespaces": "no", "RestrictRealtime": "no", "RestrictSUIDSGID": "no", "Result": "success", "RootDirectoryStartOnly": "no", "RuntimeDirectoryMode": "0755", "RuntimeDirectoryPreserve": "no", "RuntimeMaxUSec": "infinity", "SameProcessGroup": "no", "SecureBits": "0", "SendSIGHUP": "no", "SendSIGKILL": "yes", "Slice": "system.slice", "StandardError": "inherit", "StandardInput": "null", "StandardInputData": "", "StandardOutput": "journal", "StartLimitAction": "none", "StartLimitBurst": "3", "StartLimitIntervalUSec": "1min", "StartupBlockIOWeight": "[not set]", "StartupCPUShares": "[not set]", "StartupCPUWeight": "[not set]", "StartupIOWeight": "[not set]", "StateChangeTimestamp": "Sat 2024-05-25 08:39:56 UTC", "StateChangeTimestampMonotonic": "109898780", "StateDirectoryMode": "0755", "StatusErrno": "0", "StopWhenUnneeded": "no", "SubState": "running", "SuccessAction": "none", "SyslogFacility": "3", "SyslogLevel": "6", "SyslogLevelPrefix": "yes", "SyslogPriority": "30", "SystemCallErrorNumber": "0", "TTYReset": "no", "TTYVHangup": "no", "TTYVTDisallocate": "no", "TasksAccounting": "yes", "TasksCurrent": "59", "TasksMax": "infinity", "TimeoutStartUSec": "infinity", "TimeoutStopUSec": "1min 30s", "TimerSlackNSec": "50000", "Transient": "no", "TriggeredBy": "docker.socket", "Type": "notify", "UID": "[not set]", "UMask": "0022", "UnitFilePreset": "enabled", "UnitFileState": "enabled", "UtmpMode": "init", "WantedBy": "multi-user.target", "Wants": "containerd.service network-online.target", "WatchdogTimestamp": "Sat 2024-05-25 08:39:56 UTC", "WatchdogTimestampMonotonic": "109898778", "WatchdogUSec": "0"}}
+2024-05-25 17:10:59,392 p=175410 u=lmhinnoc n=ansible | TASK [common : Copy src] ********************************************************************************************
+2024-05-25 17:11:00,274 p=175410 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-be) => {"ansible_loop_var": "item", "changed": false, "cmd": "/usr/bin/rsync --delay-updates -F --compress --archive --rsh='/usr/bin/ssh -S none -i .vagrant/machines/go_go_2/virtualbox/private_key -o Port=2222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null' --rsync-path='sudo -u root rsync' --exclude=.git --exclude=.gitignore --exclude=.vscode --exclude=./node_modules/ --chown=root:root --out-format='<<CHANGED>>%i %n%L' /home/lmhinnoc/Documents/vdt/midterm/go-go-be vagrant@127.0.0.1:./go-go-go", "item": "go-go-be", "msg": "", "rc": 0, "stdout_lines": []}
+2024-05-25 17:11:00,377 p=175410 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-be) => {"ansible_loop_var": "item", "changed": false, "cmd": "/usr/bin/rsync --delay-updates -F --compress --archive --rsh='/usr/bin/ssh -S none -i .vagrant/machines/go_go_1/virtualbox/private_key -o Port=2223 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null' --rsync-path='sudo -u root rsync' --exclude=.git --exclude=.gitignore --exclude=.vscode --exclude=./node_modules/ --chown=root:root --out-format='<<CHANGED>>%i %n%L' /home/lmhinnoc/Documents/vdt/midterm/go-go-be vagrant@127.0.0.1:./go-go-go", "item": "go-go-be", "msg": "", "rc": 0, "stdout_lines": []}
+2024-05-25 17:11:01,465 p=175410 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-fe) => {"ansible_loop_var": "item", "changed": false, "cmd": "/usr/bin/rsync --delay-updates -F --compress --archive --rsh='/usr/bin/ssh -S none -i .vagrant/machines/go_go_2/virtualbox/private_key -o Port=2222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null' --rsync-path='sudo -u root rsync' --exclude=.git --exclude=.gitignore --exclude=.vscode --exclude=./node_modules/ --chown=root:root --out-format='<<CHANGED>>%i %n%L' /home/lmhinnoc/Documents/vdt/midterm/go-go-fe vagrant@127.0.0.1:./go-go-go", "item": "go-go-fe", "msg": "", "rc": 0, "stdout_lines": []}
+2024-05-25 17:11:01,678 p=175410 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-fe) => {"ansible_loop_var": "item", "changed": false, "cmd": "/usr/bin/rsync --delay-updates -F --compress --archive --rsh='/usr/bin/ssh -S none -i .vagrant/machines/go_go_1/virtualbox/private_key -o Port=2223 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null' --rsync-path='sudo -u root rsync' --exclude=.git --exclude=.gitignore --exclude=.vscode --exclude=./node_modules/ --chown=root:root --out-format='<<CHANGED>>%i %n%L' /home/lmhinnoc/Documents/vdt/midterm/go-go-fe vagrant@127.0.0.1:./go-go-go", "item": "go-go-fe", "msg": "", "rc": 0, "stdout_lines": []}
+2024-05-25 17:11:01,685 p=175410 u=lmhinnoc n=ansible | PLAY [Start project] ************************************************************************************************
+2024-05-25 17:11:01,689 p=175410 u=lmhinnoc n=ansible | TASK [docker-compose : Run services with docker compose] ************************************************************
+2024-05-25 17:11:04,415 p=175410 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-be) => {"actions": [], "ansible_loop_var": "item", "changed": false, "containers": [{"Command": "docker-entrypoint.sh postgres", "Created": 1716628080, "ExitCode": 0, "Health": "healthy", "ID": "7897bbb7b37db9306968a6f6d09af5ba72525c19ad87ac2dbb22c7dcd406de71", "Image": "go-go-be-postgres-go", "Labels": {}, "Name": "postgres-go", "Names": ["postgres-go"], "Networks": [""], "Project": "go-go-be", "Publishers": [{"Protocol": "tcp", "PublishedPort": 5433, "TargetPort": 5432, "URL": "0.0.0.0"}, {"Protocol": "tcp", "PublishedPort": 5433, "TargetPort": 5432, "URL": "::"}], "Service": "postgres-go", "State": "running", "Status": "Up About an hour (healthy)"}, {"Command": "./run-app", "Created": 1716628080, "ExitCode": 0, "Health": "", "ID": "67deedf25c32c6efc828d8f11efdef9e2eeb9c6ee8475d434ef5b5ccac2b6bf0", "Image": "go-go-be-server-go", "Labels": {}, "Name": "server-go", "Names": ["server-go"], "Networks": [""], "Project": "go-go-be", "Publishers": [{"Protocol": "tcp", "PublishedPort": 3000, "TargetPort": 3000, "URL": "0.0.0.0"}, {"Protocol": "tcp", "PublishedPort": 3000, "TargetPort": 3000, "URL": "::"}], "Service": "server-go", "State": "running", "Status": "Up About an hour"}], "images": [{"ContainerName": "postgres-go", "ID": "sha256:2711cbfea17caaee8f5dd8e0bc1deda7a971d8777c2c8b8513a41d7608de94ba", "Repository": "go-go-be-postgres-go", "Size": 418595276, "Tag": "latest"}, {"ContainerName": "server-go", "ID": "sha256:755315f2ee139f16df4535a51571edfd0e26d23881efdec4014b8af596e2ff20", "Repository": "go-go-be-server-go", "Size": 513028025, "Tag": "latest"}], "item": "go-go-be", "stderr": "time=\"2024-05-25T10:11:03Z\" level=warning msg=\"The \\\"SEED\\\" variable is not set. Defaulting to a blank string.\"\n Container postgres-go  Running\n Container server-go  Running\n Container postgres-go  Waiting\n Container postgres-go  Healthy\n", "stderr_lines": ["time=\"2024-05-25T10:11:03Z\" level=warning msg=\"The \\\"SEED\\\" variable is not set. Defaulting to a blank string.\"", " Container postgres-go  Running", " Container server-go  Running", " Container postgres-go  Waiting", " Container postgres-go  Healthy"], "warnings": ["The \"SEED\" variable is not set. Defaulting to a blank string."]}
+2024-05-25 17:11:05,458 p=175410 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-be) => {"actions": [], "ansible_loop_var": "item", "changed": false, "containers": [{"Command": "docker-entrypoint.sh postgres", "Created": 1716627647, "ExitCode": 0, "Health": "healthy", "ID": "fe2172890f0c45971be4754a36a5a60503d05310a15b62c3df61fb6d92a41e97", "Image": "go-go-be-postgres-go", "Labels": {}, "Name": "postgres-go", "Names": ["postgres-go"], "Networks": [""], "Project": "go-go-be", "Publishers": [{"Protocol": "tcp", "PublishedPort": 5433, "TargetPort": 5432, "URL": "0.0.0.0"}, {"Protocol": "tcp", "PublishedPort": 5433, "TargetPort": 5432, "URL": "::"}], "Service": "postgres-go", "State": "running", "Status": "Up About an hour (healthy)"}, {"Command": "./run-app", "Created": 1716627647, "ExitCode": 0, "Health": "", "ID": "cfc0c38ba2cee438b7b3f89cce44a3b13b492af1f59e53ee86c966db68c1bffb", "Image": "go-go-be-server-go", "Labels": {}, "Name": "server-go", "Names": ["server-go"], "Networks": [""], "Project": "go-go-be", "Publishers": [{"Protocol": "tcp", "PublishedPort": 3000, "TargetPort": 3000, "URL": "0.0.0.0"}, {"Protocol": "tcp", "PublishedPort": 3000, "TargetPort": 3000, "URL": "::"}], "Service": "server-go", "State": "running", "Status": "Up About an hour"}], "images": [{"ContainerName": "postgres-go", "ID": "sha256:8ebcd8385b45a3c2e0f1f088f5bb42321298b021173a3464973e21c9f7d5eb13", "Repository": "go-go-be-postgres-go", "Size": 418595276, "Tag": "latest"}, {"ContainerName": "server-go", "ID": "sha256:3f4edb0d54f6c3f0977e6e172f4cb61035521adfc67d505d7d47f4b81f7ca802", "Repository": "go-go-be-server-go", "Size": 513028025, "Tag": "latest"}], "item": "go-go-be", "stderr": "time=\"2024-05-25T10:11:04Z\" level=warning msg=\"The \\\"SEED\\\" variable is not set. Defaulting to a blank string.\"\n Container postgres-go  Running\n Container server-go  Running\n Container postgres-go  Waiting\n Container postgres-go  Healthy\n", "stderr_lines": ["time=\"2024-05-25T10:11:04Z\" level=warning msg=\"The \\\"SEED\\\" variable is not set. Defaulting to a blank string.\"", " Container postgres-go  Running", " Container server-go  Running", " Container postgres-go  Waiting", " Container postgres-go  Healthy"], "warnings": ["The \"SEED\" variable is not set. Defaulting to a blank string."]}
+2024-05-25 17:11:05,918 p=175410 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-fe) => {"actions": [], "ansible_loop_var": "item", "changed": false, "containers": [{"Command": "docker-entrypoint.sh yarn run serve", "Created": 1716628295, "ExitCode": 0, "Health": "", "ID": "2af40cfd498521e561ff542ae20d0394a45a5e67a83d14df142e8459744358aa", "Image": "go-go-fe-web", "Labels": {}, "Name": "go-go-fe-web-1", "Names": ["go-go-fe-web-1"], "Networks": [""], "Project": "go-go-fe", "Publishers": [{"Protocol": "tcp", "PublishedPort": 8081, "TargetPort": 8080, "URL": "0.0.0.0"}, {"Protocol": "tcp", "PublishedPort": 8081, "TargetPort": 8080, "URL": "::"}], "Service": "web", "State": "running", "Status": "Up 57 minutes"}], "images": [{"ContainerName": "go-go-fe-web-1", "ID": "sha256:a89acb7e7d285101c4d3fe4ba7946e53e507216ac0d856a12e66a4a912cee7b6", "Repository": "go-go-fe-web", "Size": 828104876, "Tag": "latest"}], "item": "go-go-fe", "stderr": " Container go-go-fe-web-1  Running\n", "stderr_lines": [" Container go-go-fe-web-1  Running"]}
+2024-05-25 17:11:05,919 p=175410 u=lmhinnoc n=ansible | [WARNING]: The "SEED" variable is not set. Defaulting to a blank string.
+
+2024-05-25 17:11:08,414 p=175410 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-fe) => {"actions": [], "ansible_loop_var": "item", "changed": false, "containers": [{"Command": "docker-entrypoint.sh yarn run serve", "Created": 1716627814, "ExitCode": 0, "Health": "", "ID": "f685dc9ad4939942c335ccefddd0224b9c62c875369d46b31a83dc5168050827", "Image": "go-go-fe-web", "Labels": {}, "Name": "go-go-fe-web-1", "Names": ["go-go-fe-web-1"], "Networks": [""], "Project": "go-go-fe", "Publishers": [{"Protocol": "tcp", "PublishedPort": 8081, "TargetPort": 8080, "URL": "0.0.0.0"}, {"Protocol": "tcp", "PublishedPort": 8081, "TargetPort": 8080, "URL": "::"}], "Service": "web", "State": "running", "Status": "Up About an hour"}], "images": [{"ContainerName": "go-go-fe-web-1", "ID": "sha256:6d8f7aeeea855f1f1d0eb2bc1eec21f257891b7f629f4e644ed71de4f00e0f40", "Repository": "go-go-fe-web", "Size": 828104876, "Tag": "latest"}], "item": "go-go-fe", "stderr": " Container go-go-fe-web-1  Running\n", "stderr_lines": [" Container go-go-fe-web-1  Running"]}
+2024-05-25 17:11:08,421 p=175410 u=lmhinnoc n=ansible | TASK [docker-compose : Debug output of docker compose] **************************************************************
+2024-05-25 17:11:08,453 p=175410 u=lmhinnoc n=ansible | ok: [go_go_2] => {
+    "output": {
+        "changed": false,
+        "msg": "All items completed",
+        "results": [
+            {
+                "actions": [],
+                "ansible_loop_var": "item",
+                "changed": false,
+                "containers": [
+                    {
+                        "Command": "docker-entrypoint.sh postgres",
+                        "Created": 1716628080,
+                        "ExitCode": 0,
+                        "Health": "healthy",
+                        "ID": "7897bbb7b37db9306968a6f6d09af5ba72525c19ad87ac2dbb22c7dcd406de71",
+                        "Image": "go-go-be-postgres-go",
+                        "Labels": {},
+                        "Name": "postgres-go",
+                        "Names": [
+                            "postgres-go"
+                        ],
+                        "Networks": [
+                            ""
+                        ],
+                        "Project": "go-go-be",
+                        "Publishers": [
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 5433,
+                                "TargetPort": 5432,
+                                "URL": "0.0.0.0"
+                            },
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 5433,
+                                "TargetPort": 5432,
+                                "URL": "::"
+                            }
+                        ],
+                        "Service": "postgres-go",
+                        "State": "running",
+                        "Status": "Up About an hour (healthy)"
+                    },
+                    {
+                        "Command": "./run-app",
+                        "Created": 1716628080,
+                        "ExitCode": 0,
+                        "Health": "",
+                        "ID": "67deedf25c32c6efc828d8f11efdef9e2eeb9c6ee8475d434ef5b5ccac2b6bf0",
+                        "Image": "go-go-be-server-go",
+                        "Labels": {},
+                        "Name": "server-go",
+                        "Names": [
+                            "server-go"
+                        ],
+                        "Networks": [
+                            ""
+                        ],
+                        "Project": "go-go-be",
+                        "Publishers": [
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 3000,
+                                "TargetPort": 3000,
+                                "URL": "0.0.0.0"
+                            },
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 3000,
+                                "TargetPort": 3000,
+                                "URL": "::"
+                            }
+                        ],
+                        "Service": "server-go",
+                        "State": "running",
+                        "Status": "Up About an hour"
+                    }
+                ],
+                "failed": false,
+                "images": [
+                    {
+                        "ContainerName": "postgres-go",
+                        "ID": "sha256:2711cbfea17caaee8f5dd8e0bc1deda7a971d8777c2c8b8513a41d7608de94ba",
+                        "Repository": "go-go-be-postgres-go",
+                        "Size": 418595276,
+                        "Tag": "latest"
+                    },
+                    {
+                        "ContainerName": "server-go",
+                        "ID": "sha256:755315f2ee139f16df4535a51571edfd0e26d23881efdec4014b8af596e2ff20",
+                        "Repository": "go-go-be-server-go",
+                        "Size": 513028025,
+                        "Tag": "latest"
+                    }
+                ],
+                "invocation": {
+                    "module_args": {
+                        "api_version": "auto",
+                        "build": "policy",
+                        "ca_path": null,
+                        "check_files_existing": true,
+                        "cli_context": null,
+                        "client_cert": null,
+                        "client_key": null,
+                        "definition": null,
+                        "dependencies": true,
+                        "docker_cli": null,
+                        "docker_host": "unix:///var/run/docker.sock",
+                        "env_files": null,
+                        "files": null,
+                        "profiles": null,
+                        "project_name": null,
+                        "project_src": "./go-go-go/go-go-be",
+                        "pull": "policy",
+                        "recreate": "auto",
+                        "remove_images": null,
+                        "remove_orphans": false,
+                        "remove_volumes": false,
+                        "scale": null,
+                        "services": null,
+                        "state": "present",
+                        "timeout": null,
+                        "tls": false,
+                        "tls_hostname": null,
+                        "validate_certs": false,
+                        "wait": false,
+                        "wait_timeout": null
+                    }
+                },
+                "item": "go-go-be",
+                "stderr": "time=\"2024-05-25T10:11:03Z\" level=warning msg=\"The \\\"SEED\\\" variable is not set. Defaulting to a blank string.\"\n Container postgres-go  Running\n Container server-go  Running\n Container postgres-go  Waiting\n Container postgres-go  Healthy\n",
+                "stderr_lines": [
+                    "time=\"2024-05-25T10:11:03Z\" level=warning msg=\"The \\\"SEED\\\" variable is not set. Defaulting to a blank string.\"",
+                    " Container postgres-go  Running",
+                    " Container server-go  Running",
+                    " Container postgres-go  Waiting",
+                    " Container postgres-go  Healthy"
+                ]
+            },
+            {
+                "actions": [],
+                "ansible_loop_var": "item",
+                "changed": false,
+                "containers": [
+                    {
+                        "Command": "docker-entrypoint.sh yarn run serve",
+                        "Created": 1716628295,
+                        "ExitCode": 0,
+                        "Health": "",
+                        "ID": "2af40cfd498521e561ff542ae20d0394a45a5e67a83d14df142e8459744358aa",
+                        "Image": "go-go-fe-web",
+                        "Labels": {},
+                        "Name": "go-go-fe-web-1",
+                        "Names": [
+                            "go-go-fe-web-1"
+                        ],
+                        "Networks": [
+                            ""
+                        ],
+                        "Project": "go-go-fe",
+                        "Publishers": [
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 8081,
+                                "TargetPort": 8080,
+                                "URL": "0.0.0.0"
+                            },
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 8081,
+                                "TargetPort": 8080,
+                                "URL": "::"
+                            }
+                        ],
+                        "Service": "web",
+                        "State": "running",
+                        "Status": "Up 57 minutes"
+                    }
+                ],
+                "failed": false,
+                "images": [
+                    {
+                        "ContainerName": "go-go-fe-web-1",
+                        "ID": "sha256:a89acb7e7d285101c4d3fe4ba7946e53e507216ac0d856a12e66a4a912cee7b6",
+                        "Repository": "go-go-fe-web",
+                        "Size": 828104876,
+                        "Tag": "latest"
+                    }
+                ],
+                "invocation": {
+                    "module_args": {
+                        "api_version": "auto",
+                        "build": "policy",
+                        "ca_path": null,
+                        "check_files_existing": true,
+                        "cli_context": null,
+                        "client_cert": null,
+                        "client_key": null,
+                        "definition": null,
+                        "dependencies": true,
+                        "docker_cli": null,
+                        "docker_host": "unix:///var/run/docker.sock",
+                        "env_files": null,
+                        "files": null,
+                        "profiles": null,
+                        "project_name": null,
+                        "project_src": "./go-go-go/go-go-fe",
+                        "pull": "policy",
+                        "recreate": "auto",
+                        "remove_images": null,
+                        "remove_orphans": false,
+                        "remove_volumes": false,
+                        "scale": null,
+                        "services": null,
+                        "state": "present",
+                        "timeout": null,
+                        "tls": false,
+                        "tls_hostname": null,
+                        "validate_certs": false,
+                        "wait": false,
+                        "wait_timeout": null
+                    }
+                },
+                "item": "go-go-fe",
+                "stderr": " Container go-go-fe-web-1  Running\n",
+                "stderr_lines": [
+                    " Container go-go-fe-web-1  Running"
+                ]
+            }
+        ],
+        "skipped": false,
+        "warnings": [
+            "The \"SEED\" variable is not set. Defaulting to a blank string."
+        ]
+    }
+}
+2024-05-25 17:11:08,454 p=175410 u=lmhinnoc n=ansible | ok: [go_go_1] => {
+    "output": {
+        "changed": false,
+        "msg": "All items completed",
+        "results": [
+            {
+                "actions": [],
+                "ansible_loop_var": "item",
+                "changed": false,
+                "containers": [
+                    {
+                        "Command": "docker-entrypoint.sh postgres",
+                        "Created": 1716627647,
+                        "ExitCode": 0,
+                        "Health": "healthy",
+                        "ID": "fe2172890f0c45971be4754a36a5a60503d05310a15b62c3df61fb6d92a41e97",
+                        "Image": "go-go-be-postgres-go",
+                        "Labels": {},
+                        "Name": "postgres-go",
+                        "Names": [
+                            "postgres-go"
+                        ],
+                        "Networks": [
+                            ""
+                        ],
+                        "Project": "go-go-be",
+                        "Publishers": [
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 5433,
+                                "TargetPort": 5432,
+                                "URL": "0.0.0.0"
+                            },
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 5433,
+                                "TargetPort": 5432,
+                                "URL": "::"
+                            }
+                        ],
+                        "Service": "postgres-go",
+                        "State": "running",
+                        "Status": "Up About an hour (healthy)"
+                    },
+                    {
+                        "Command": "./run-app",
+                        "Created": 1716627647,
+                        "ExitCode": 0,
+                        "Health": "",
+                        "ID": "cfc0c38ba2cee438b7b3f89cce44a3b13b492af1f59e53ee86c966db68c1bffb",
+                        "Image": "go-go-be-server-go",
+                        "Labels": {},
+                        "Name": "server-go",
+                        "Names": [
+                            "server-go"
+                        ],
+                        "Networks": [
+                            ""
+                        ],
+                        "Project": "go-go-be",
+                        "Publishers": [
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 3000,
+                                "TargetPort": 3000,
+                                "URL": "0.0.0.0"
+                            },
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 3000,
+                                "TargetPort": 3000,
+                                "URL": "::"
+                            }
+                        ],
+                        "Service": "server-go",
+                        "State": "running",
+                        "Status": "Up About an hour"
+                    }
+                ],
+                "failed": false,
+                "images": [
+                    {
+                        "ContainerName": "postgres-go",
+                        "ID": "sha256:8ebcd8385b45a3c2e0f1f088f5bb42321298b021173a3464973e21c9f7d5eb13",
+                        "Repository": "go-go-be-postgres-go",
+                        "Size": 418595276,
+                        "Tag": "latest"
+                    },
+                    {
+                        "ContainerName": "server-go",
+                        "ID": "sha256:3f4edb0d54f6c3f0977e6e172f4cb61035521adfc67d505d7d47f4b81f7ca802",
+                        "Repository": "go-go-be-server-go",
+                        "Size": 513028025,
+                        "Tag": "latest"
+                    }
+                ],
+                "invocation": {
+                    "module_args": {
+                        "api_version": "auto",
+                        "build": "policy",
+                        "ca_path": null,
+                        "check_files_existing": true,
+                        "cli_context": null,
+                        "client_cert": null,
+                        "client_key": null,
+                        "definition": null,
+                        "dependencies": true,
+                        "docker_cli": null,
+                        "docker_host": "unix:///var/run/docker.sock",
+                        "env_files": null,
+                        "files": null,
+                        "profiles": null,
+                        "project_name": null,
+                        "project_src": "./go-go-go/go-go-be",
+                        "pull": "policy",
+                        "recreate": "auto",
+                        "remove_images": null,
+                        "remove_orphans": false,
+                        "remove_volumes": false,
+                        "scale": null,
+                        "services": null,
+                        "state": "present",
+                        "timeout": null,
+                        "tls": false,
+                        "tls_hostname": null,
+                        "validate_certs": false,
+                        "wait": false,
+                        "wait_timeout": null
+                    }
+                },
+                "item": "go-go-be",
+                "stderr": "time=\"2024-05-25T10:11:04Z\" level=warning msg=\"The \\\"SEED\\\" variable is not set. Defaulting to a blank string.\"\n Container postgres-go  Running\n Container server-go  Running\n Container postgres-go  Waiting\n Container postgres-go  Healthy\n",
+                "stderr_lines": [
+                    "time=\"2024-05-25T10:11:04Z\" level=warning msg=\"The \\\"SEED\\\" variable is not set. Defaulting to a blank string.\"",
+                    " Container postgres-go  Running",
+                    " Container server-go  Running",
+                    " Container postgres-go  Waiting",
+                    " Container postgres-go  Healthy"
+                ]
+            },
+            {
+                "actions": [],
+                "ansible_loop_var": "item",
+                "changed": false,
+                "containers": [
+                    {
+                        "Command": "docker-entrypoint.sh yarn run serve",
+                        "Created": 1716627814,
+                        "ExitCode": 0,
+                        "Health": "",
+                        "ID": "f685dc9ad4939942c335ccefddd0224b9c62c875369d46b31a83dc5168050827",
+                        "Image": "go-go-fe-web",
+                        "Labels": {},
+                        "Name": "go-go-fe-web-1",
+                        "Names": [
+                            "go-go-fe-web-1"
+                        ],
+                        "Networks": [
+                            ""
+                        ],
+                        "Project": "go-go-fe",
+                        "Publishers": [
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 8081,
+                                "TargetPort": 8080,
+                                "URL": "0.0.0.0"
+                            },
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 8081,
+                                "TargetPort": 8080,
+                                "URL": "::"
+                            }
+                        ],
+                        "Service": "web",
+                        "State": "running",
+                        "Status": "Up About an hour"
+                    }
+                ],
+                "failed": false,
+                "images": [
+                    {
+                        "ContainerName": "go-go-fe-web-1",
+                        "ID": "sha256:6d8f7aeeea855f1f1d0eb2bc1eec21f257891b7f629f4e644ed71de4f00e0f40",
+                        "Repository": "go-go-fe-web",
+                        "Size": 828104876,
+                        "Tag": "latest"
+                    }
+                ],
+                "invocation": {
+                    "module_args": {
+                        "api_version": "auto",
+                        "build": "policy",
+                        "ca_path": null,
+                        "check_files_existing": true,
+                        "cli_context": null,
+                        "client_cert": null,
+                        "client_key": null,
+                        "definition": null,
+                        "dependencies": true,
+                        "docker_cli": null,
+                        "docker_host": "unix:///var/run/docker.sock",
+                        "env_files": null,
+                        "files": null,
+                        "profiles": null,
+                        "project_name": null,
+                        "project_src": "./go-go-go/go-go-fe",
+                        "pull": "policy",
+                        "recreate": "auto",
+                        "remove_images": null,
+                        "remove_orphans": false,
+                        "remove_volumes": false,
+                        "scale": null,
+                        "services": null,
+                        "state": "present",
+                        "timeout": null,
+                        "tls": false,
+                        "tls_hostname": null,
+                        "validate_certs": false,
+                        "wait": false,
+                        "wait_timeout": null
+                    }
+                },
+                "item": "go-go-fe",
+                "stderr": " Container go-go-fe-web-1  Running\n",
+                "stderr_lines": [
+                    " Container go-go-fe-web-1  Running"
+                ]
+            }
+        ],
+        "skipped": false,
+        "warnings": [
+            "The \"SEED\" variable is not set. Defaulting to a blank string."
+        ]
+    }
+}
+2024-05-25 17:11:08,456 p=175410 u=lmhinnoc n=ansible | TASK [docker-compose : Assert services are running] *****************************************************************
+2024-05-25 17:11:08,470 p=175410 u=lmhinnoc n=ansible | ok: [go_go_2] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+2024-05-25 17:11:08,475 p=175410 u=lmhinnoc n=ansible | ok: [go_go_1] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+2024-05-25 17:11:08,483 p=175410 u=lmhinnoc n=ansible | PLAY RECAP **********************************************************************************************************
+2024-05-25 17:11:08,483 p=175410 u=lmhinnoc n=ansible | go_go_1                    : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-05-25 17:11:08,483 p=175410 u=lmhinnoc n=ansible | go_go_2                    : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-05-25 17:23:52,350 p=177705 u=lmhinnoc n=ansible | PLAY [Setup project] ************************************************************************************************
+2024-05-25 17:23:52,355 p=177705 u=lmhinnoc n=ansible | TASK [common : Ensure docker service is running] ********************************************************************
+2024-05-25 17:23:54,134 p=177705 u=lmhinnoc n=ansible | ok: [go_go_2]
+2024-05-25 17:23:54,149 p=177705 u=lmhinnoc n=ansible | ok: [go_go_1]
+2024-05-25 17:23:54,153 p=177705 u=lmhinnoc n=ansible | TASK [common : Copy src] ********************************************************************************************
+2024-05-25 17:23:54,664 p=177705 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-be)
+2024-05-25 17:23:54,726 p=177705 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-be)
+2024-05-25 17:23:55,882 p=177705 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-fe)
+2024-05-25 17:23:56,049 p=177705 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-fe)
+2024-05-25 17:23:56,070 p=177705 u=lmhinnoc n=ansible | PLAY [Start project] ************************************************************************************************
+2024-05-25 17:23:56,080 p=177705 u=lmhinnoc n=ansible | TASK [docker-compose : Run services with docker compose] ************************************************************
+2024-05-25 17:23:59,304 p=177705 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-be)
+2024-05-25 17:23:59,353 p=177705 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-be)
+2024-05-25 17:24:01,575 p=177705 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-fe)
+2024-05-25 17:24:01,577 p=177705 u=lmhinnoc n=ansible | [WARNING]: The "SEED" variable is not set. Defaulting to a blank string.
+
+2024-05-25 17:24:01,960 p=177705 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-fe)
+2024-05-25 17:24:01,962 p=177705 u=lmhinnoc n=ansible | TASK [docker-compose : Debug output of docker compose] **************************************************************
+2024-05-25 17:24:01,979 p=177705 u=lmhinnoc n=ansible | ok: [go_go_2] => {
+    "output": {
+        "changed": false,
+        "msg": "All items completed",
+        "results": [
+            {
+                "actions": [],
+                "ansible_loop_var": "item",
+                "changed": false,
+                "containers": [
+                    {
+                        "Command": "docker-entrypoint.sh postgres",
+                        "Created": 1716628080,
+                        "ExitCode": 0,
+                        "Health": "healthy",
+                        "ID": "7897bbb7b37db9306968a6f6d09af5ba72525c19ad87ac2dbb22c7dcd406de71",
+                        "Image": "go-go-be-postgres-go",
+                        "Labels": {},
+                        "Name": "postgres-go",
+                        "Names": [
+                            "postgres-go"
+                        ],
+                        "Networks": [
+                            ""
+                        ],
+                        "Project": "go-go-be",
+                        "Publishers": [
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 5433,
+                                "TargetPort": 5432,
+                                "URL": "0.0.0.0"
+                            },
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 5433,
+                                "TargetPort": 5432,
+                                "URL": "::"
+                            }
+                        ],
+                        "Service": "postgres-go",
+                        "State": "running",
+                        "Status": "Up About an hour (healthy)"
+                    },
+                    {
+                        "Command": "./run-app",
+                        "Created": 1716628080,
+                        "ExitCode": 0,
+                        "Health": "",
+                        "ID": "67deedf25c32c6efc828d8f11efdef9e2eeb9c6ee8475d434ef5b5ccac2b6bf0",
+                        "Image": "go-go-be-server-go",
+                        "Labels": {},
+                        "Name": "server-go",
+                        "Names": [
+                            "server-go"
+                        ],
+                        "Networks": [
+                            ""
+                        ],
+                        "Project": "go-go-be",
+                        "Publishers": [
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 3000,
+                                "TargetPort": 3000,
+                                "URL": "0.0.0.0"
+                            },
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 3000,
+                                "TargetPort": 3000,
+                                "URL": "::"
+                            }
+                        ],
+                        "Service": "server-go",
+                        "State": "running",
+                        "Status": "Up About an hour"
+                    }
+                ],
+                "failed": false,
+                "images": [
+                    {
+                        "ContainerName": "postgres-go",
+                        "ID": "sha256:2711cbfea17caaee8f5dd8e0bc1deda7a971d8777c2c8b8513a41d7608de94ba",
+                        "Repository": "go-go-be-postgres-go",
+                        "Size": 418595276,
+                        "Tag": "latest"
+                    },
+                    {
+                        "ContainerName": "server-go",
+                        "ID": "sha256:755315f2ee139f16df4535a51571edfd0e26d23881efdec4014b8af596e2ff20",
+                        "Repository": "go-go-be-server-go",
+                        "Size": 513028025,
+                        "Tag": "latest"
+                    }
+                ],
+                "invocation": {
+                    "module_args": {
+                        "api_version": "auto",
+                        "build": "policy",
+                        "ca_path": null,
+                        "check_files_existing": true,
+                        "cli_context": null,
+                        "client_cert": null,
+                        "client_key": null,
+                        "definition": null,
+                        "dependencies": true,
+                        "docker_cli": null,
+                        "docker_host": "unix:///var/run/docker.sock",
+                        "env_files": null,
+                        "files": null,
+                        "profiles": null,
+                        "project_name": null,
+                        "project_src": "./go-go-go/go-go-be",
+                        "pull": "policy",
+                        "recreate": "auto",
+                        "remove_images": null,
+                        "remove_orphans": false,
+                        "remove_volumes": false,
+                        "scale": null,
+                        "services": null,
+                        "state": "present",
+                        "timeout": null,
+                        "tls": false,
+                        "tls_hostname": null,
+                        "validate_certs": false,
+                        "wait": false,
+                        "wait_timeout": null
+                    }
+                },
+                "item": "go-go-be",
+                "stderr": "time=\"2024-05-25T10:23:58Z\" level=warning msg=\"The \\\"SEED\\\" variable is not set. Defaulting to a blank string.\"\n Container postgres-go  Running\n Container server-go  Running\n Container postgres-go  Waiting\n Container postgres-go  Healthy\n",
+                "stderr_lines": [
+                    "time=\"2024-05-25T10:23:58Z\" level=warning msg=\"The \\\"SEED\\\" variable is not set. Defaulting to a blank string.\"",
+                    " Container postgres-go  Running",
+                    " Container server-go  Running",
+                    " Container postgres-go  Waiting",
+                    " Container postgres-go  Healthy"
+                ]
+            },
+            {
+                "actions": [],
+                "ansible_loop_var": "item",
+                "changed": false,
+                "containers": [
+                    {
+                        "Command": "docker-entrypoint.sh yarn run serve",
+                        "Created": 1716628295,
+                        "ExitCode": 0,
+                        "Health": "",
+                        "ID": "2af40cfd498521e561ff542ae20d0394a45a5e67a83d14df142e8459744358aa",
+                        "Image": "go-go-fe-web",
+                        "Labels": {},
+                        "Name": "go-go-fe-web-1",
+                        "Names": [
+                            "go-go-fe-web-1"
+                        ],
+                        "Networks": [
+                            ""
+                        ],
+                        "Project": "go-go-fe",
+                        "Publishers": [
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 8081,
+                                "TargetPort": 8080,
+                                "URL": "0.0.0.0"
+                            },
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 8081,
+                                "TargetPort": 8080,
+                                "URL": "::"
+                            }
+                        ],
+                        "Service": "web",
+                        "State": "running",
+                        "Status": "Up About an hour"
+                    }
+                ],
+                "failed": false,
+                "images": [
+                    {
+                        "ContainerName": "go-go-fe-web-1",
+                        "ID": "sha256:a89acb7e7d285101c4d3fe4ba7946e53e507216ac0d856a12e66a4a912cee7b6",
+                        "Repository": "go-go-fe-web",
+                        "Size": 828104876,
+                        "Tag": "latest"
+                    }
+                ],
+                "invocation": {
+                    "module_args": {
+                        "api_version": "auto",
+                        "build": "policy",
+                        "ca_path": null,
+                        "check_files_existing": true,
+                        "cli_context": null,
+                        "client_cert": null,
+                        "client_key": null,
+                        "definition": null,
+                        "dependencies": true,
+                        "docker_cli": null,
+                        "docker_host": "unix:///var/run/docker.sock",
+                        "env_files": null,
+                        "files": null,
+                        "profiles": null,
+                        "project_name": null,
+                        "project_src": "./go-go-go/go-go-fe",
+                        "pull": "policy",
+                        "recreate": "auto",
+                        "remove_images": null,
+                        "remove_orphans": false,
+                        "remove_volumes": false,
+                        "scale": null,
+                        "services": null,
+                        "state": "present",
+                        "timeout": null,
+                        "tls": false,
+                        "tls_hostname": null,
+                        "validate_certs": false,
+                        "wait": false,
+                        "wait_timeout": null
+                    }
+                },
+                "item": "go-go-fe",
+                "stderr": " Container go-go-fe-web-1  Running\n",
+                "stderr_lines": [
+                    " Container go-go-fe-web-1  Running"
+                ]
+            }
+        ],
+        "skipped": false,
+        "warnings": [
+            "The \"SEED\" variable is not set. Defaulting to a blank string."
+        ]
+    }
+}
+2024-05-25 17:24:01,981 p=177705 u=lmhinnoc n=ansible | ok: [go_go_1] => {
+    "output": {
+        "changed": false,
+        "msg": "All items completed",
+        "results": [
+            {
+                "actions": [],
+                "ansible_loop_var": "item",
+                "changed": false,
+                "containers": [
+                    {
+                        "Command": "docker-entrypoint.sh postgres",
+                        "Created": 1716627647,
+                        "ExitCode": 0,
+                        "Health": "healthy",
+                        "ID": "fe2172890f0c45971be4754a36a5a60503d05310a15b62c3df61fb6d92a41e97",
+                        "Image": "go-go-be-postgres-go",
+                        "Labels": {},
+                        "Name": "postgres-go",
+                        "Names": [
+                            "postgres-go"
+                        ],
+                        "Networks": [
+                            ""
+                        ],
+                        "Project": "go-go-be",
+                        "Publishers": [
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 5433,
+                                "TargetPort": 5432,
+                                "URL": "0.0.0.0"
+                            },
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 5433,
+                                "TargetPort": 5432,
+                                "URL": "::"
+                            }
+                        ],
+                        "Service": "postgres-go",
+                        "State": "running",
+                        "Status": "Up About an hour (healthy)"
+                    },
+                    {
+                        "Command": "./run-app",
+                        "Created": 1716627647,
+                        "ExitCode": 0,
+                        "Health": "",
+                        "ID": "cfc0c38ba2cee438b7b3f89cce44a3b13b492af1f59e53ee86c966db68c1bffb",
+                        "Image": "go-go-be-server-go",
+                        "Labels": {},
+                        "Name": "server-go",
+                        "Names": [
+                            "server-go"
+                        ],
+                        "Networks": [
+                            ""
+                        ],
+                        "Project": "go-go-be",
+                        "Publishers": [
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 3000,
+                                "TargetPort": 3000,
+                                "URL": "0.0.0.0"
+                            },
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 3000,
+                                "TargetPort": 3000,
+                                "URL": "::"
+                            }
+                        ],
+                        "Service": "server-go",
+                        "State": "running",
+                        "Status": "Up About an hour"
+                    }
+                ],
+                "failed": false,
+                "images": [
+                    {
+                        "ContainerName": "postgres-go",
+                        "ID": "sha256:8ebcd8385b45a3c2e0f1f088f5bb42321298b021173a3464973e21c9f7d5eb13",
+                        "Repository": "go-go-be-postgres-go",
+                        "Size": 418595276,
+                        "Tag": "latest"
+                    },
+                    {
+                        "ContainerName": "server-go",
+                        "ID": "sha256:3f4edb0d54f6c3f0977e6e172f4cb61035521adfc67d505d7d47f4b81f7ca802",
+                        "Repository": "go-go-be-server-go",
+                        "Size": 513028025,
+                        "Tag": "latest"
+                    }
+                ],
+                "invocation": {
+                    "module_args": {
+                        "api_version": "auto",
+                        "build": "policy",
+                        "ca_path": null,
+                        "check_files_existing": true,
+                        "cli_context": null,
+                        "client_cert": null,
+                        "client_key": null,
+                        "definition": null,
+                        "dependencies": true,
+                        "docker_cli": null,
+                        "docker_host": "unix:///var/run/docker.sock",
+                        "env_files": null,
+                        "files": null,
+                        "profiles": null,
+                        "project_name": null,
+                        "project_src": "./go-go-go/go-go-be",
+                        "pull": "policy",
+                        "recreate": "auto",
+                        "remove_images": null,
+                        "remove_orphans": false,
+                        "remove_volumes": false,
+                        "scale": null,
+                        "services": null,
+                        "state": "present",
+                        "timeout": null,
+                        "tls": false,
+                        "tls_hostname": null,
+                        "validate_certs": false,
+                        "wait": false,
+                        "wait_timeout": null
+                    }
+                },
+                "item": "go-go-be",
+                "stderr": "time=\"2024-05-25T10:23:57Z\" level=warning msg=\"The \\\"SEED\\\" variable is not set. Defaulting to a blank string.\"\n Container postgres-go  Running\n Container server-go  Running\n Container postgres-go  Waiting\n Container postgres-go  Healthy\n",
+                "stderr_lines": [
+                    "time=\"2024-05-25T10:23:57Z\" level=warning msg=\"The \\\"SEED\\\" variable is not set. Defaulting to a blank string.\"",
+                    " Container postgres-go  Running",
+                    " Container server-go  Running",
+                    " Container postgres-go  Waiting",
+                    " Container postgres-go  Healthy"
+                ]
+            },
+            {
+                "actions": [],
+                "ansible_loop_var": "item",
+                "changed": false,
+                "containers": [
+                    {
+                        "Command": "docker-entrypoint.sh yarn run serve",
+                        "Created": 1716627814,
+                        "ExitCode": 0,
+                        "Health": "",
+                        "ID": "f685dc9ad4939942c335ccefddd0224b9c62c875369d46b31a83dc5168050827",
+                        "Image": "go-go-fe-web",
+                        "Labels": {},
+                        "Name": "go-go-fe-web-1",
+                        "Names": [
+                            "go-go-fe-web-1"
+                        ],
+                        "Networks": [
+                            ""
+                        ],
+                        "Project": "go-go-fe",
+                        "Publishers": [
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 8081,
+                                "TargetPort": 8080,
+                                "URL": "0.0.0.0"
+                            },
+                            {
+                                "Protocol": "tcp",
+                                "PublishedPort": 8081,
+                                "TargetPort": 8080,
+                                "URL": "::"
+                            }
+                        ],
+                        "Service": "web",
+                        "State": "running",
+                        "Status": "Up About an hour"
+                    }
+                ],
+                "failed": false,
+                "images": [
+                    {
+                        "ContainerName": "go-go-fe-web-1",
+                        "ID": "sha256:6d8f7aeeea855f1f1d0eb2bc1eec21f257891b7f629f4e644ed71de4f00e0f40",
+                        "Repository": "go-go-fe-web",
+                        "Size": 828104876,
+                        "Tag": "latest"
+                    }
+                ],
+                "invocation": {
+                    "module_args": {
+                        "api_version": "auto",
+                        "build": "policy",
+                        "ca_path": null,
+                        "check_files_existing": true,
+                        "cli_context": null,
+                        "client_cert": null,
+                        "client_key": null,
+                        "definition": null,
+                        "dependencies": true,
+                        "docker_cli": null,
+                        "docker_host": "unix:///var/run/docker.sock",
+                        "env_files": null,
+                        "files": null,
+                        "profiles": null,
+                        "project_name": null,
+                        "project_src": "./go-go-go/go-go-fe",
+                        "pull": "policy",
+                        "recreate": "auto",
+                        "remove_images": null,
+                        "remove_orphans": false,
+                        "remove_volumes": false,
+                        "scale": null,
+                        "services": null,
+                        "state": "present",
+                        "timeout": null,
+                        "tls": false,
+                        "tls_hostname": null,
+                        "validate_certs": false,
+                        "wait": false,
+                        "wait_timeout": null
+                    }
+                },
+                "item": "go-go-fe",
+                "stderr": " Container go-go-fe-web-1  Running\n",
+                "stderr_lines": [
+                    " Container go-go-fe-web-1  Running"
+                ]
+            }
+        ],
+        "skipped": false,
+        "warnings": [
+            "The \"SEED\" variable is not set. Defaulting to a blank string."
+        ]
+    }
+}
+2024-05-25 17:24:01,982 p=177705 u=lmhinnoc n=ansible | TASK [docker-compose : Assert services are running] *****************************************************************
+2024-05-25 17:24:01,994 p=177705 u=lmhinnoc n=ansible | ok: [go_go_2] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+2024-05-25 17:24:02,002 p=177705 u=lmhinnoc n=ansible | ok: [go_go_1] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+2024-05-25 17:24:02,010 p=177705 u=lmhinnoc n=ansible | PLAY RECAP **********************************************************************************************************
+2024-05-25 17:24:02,010 p=177705 u=lmhinnoc n=ansible | go_go_1                    : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-05-25 17:24:02,010 p=177705 u=lmhinnoc n=ansible | go_go_2                    : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

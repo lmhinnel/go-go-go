@@ -1,0 +1,13 @@
+- name: Setup project
+  hosts: all
+  become: true
+  gather_facts: false
+  roles:
+    - common
+
+- name: Start project
+  hosts: all
+  become: true
+  gather_facts: false
+  roles:
+    - docker-compose

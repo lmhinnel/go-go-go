@@ -1,0 +1,9 @@
+services:
+  web:
+    build:
+      target: development
+    ports:
+      - 8081:8080
+    volumes:
+      - ./.:/project
+      - /project/node_modules

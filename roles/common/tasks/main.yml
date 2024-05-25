@@ -1,0 +1,17 @@
+- name: Ensure docker service is running
+  service:
+    name: docker
+    state: started
+    enabled: yes
+
+- name: Copy src
+  synchronize:
+    src: "../../../{{ item }}"
+    dest: ./go-go-go
+    rsync_opts:
+      - "--exclude=.git"
+      - "--exclude=.gitignore"
+      - "--exclude=.vscode"
+      - "--exclude=./node_modules/"
+      - "--chown=root:root"
+  with_items: "{{ path }}"

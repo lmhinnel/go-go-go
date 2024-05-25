@@ -1,0 +1,17 @@
+- name: Run services with docker compose
+  community.docker.docker_compose_v2:
+    project_src: "./go-go-go/{{ item }}"
+    state: present
+  with_items: "{{ path }}"
+  register: output
+
+- name: Debug output of docker compose
+  debug:
+    var: output
+
+- name: Assert services are running
+  ansible.builtin.assert:
+    that:
+      - "not output.results[0].failed"
+      - "not output.results[1].failed"
+    fail_msg: "Failed to start services"

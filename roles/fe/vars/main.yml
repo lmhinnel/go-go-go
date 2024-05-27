@@ -1,0 +1,4 @@
+FE_DOCKER_EXPORT_PORT: 8081
+FE_DOCKER_NAME: "go-go-fe-web-1"
+FE_DOCKER_IMAGE: "go-go-fe-web"
+FE_DOCKER_IMAGE_TAG: "latest"

@@ -1,0 +1,5 @@
+DB_DOCKER_EXPORT_PORT: 5433
+DB_DOCKER_NAME: "postgres-go"
+DB_DOCKER_IMAGE: "go-go-be-postgres-go"
+DB_DOCKER_IMAGE_TAG: "latest"
+DB_DOCKER_VOLUME: "pgdata"

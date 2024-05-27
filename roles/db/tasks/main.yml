@@ -1,0 +1,8 @@
+- name: Run DB with docker
+  docker_container:
+    name: "{{ DB_DOCKER_NAME }}"
+    image: "{{ DB_DOCKER_IMAGE }}"
+    ports:
+      - "{{ DB_DOCKER_EXPORT_PORT }}:5432"
+    volumes:
+      - "{{ DB_DOCKER_VOLUME }}:/var/lib/postgresql/data"

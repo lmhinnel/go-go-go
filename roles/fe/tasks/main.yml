@@ -1,0 +1,6 @@
+- name: Run fe with docker
+  docker_container:
+    name: "{{ FE_DOCKER_NAME }}"
+    image: "{{ FE_DOCKER_IMAGE }}"
+    ports:
+      - "{{ FE_DOCKER_EXPORT_PORT }}:8080"

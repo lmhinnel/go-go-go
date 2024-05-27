@@ -5,9 +5,32 @@
   roles:
     - common
 
-- name: Start project
+# Option 1: Run with docker compose v2
+# - name: Start project
+#   hosts: all
+#   become: true
+#   gather_facts: false
+#   roles:
+#     - docker-compose
+
+# Option 2: Run with docker each service
+- name: Start DB
   hosts: all
   become: true
   gather_facts: false
   roles:
-    - docker-compose
+    - db
+
+- name: Start API
+  hosts: all
+  become: true
+  gather_facts: false
+  roles:
+    - api
+
+- name: Start FE
+  hosts: all
+  become: true
+  gather_facts: false
+  roles:
+    - fe

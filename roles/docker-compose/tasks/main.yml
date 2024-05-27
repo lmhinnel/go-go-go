@@ -5,9 +5,9 @@
   with_items: "{{ path }}"
   register: output
 
-- name: Debug output of docker compose
-  debug:
-    var: output
+# - name: Debug output of docker compose
+#   debug:
+#     var: output
 
 - name: Assert services are running
   ansible.builtin.assert:

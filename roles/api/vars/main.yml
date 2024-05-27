@@ -1,0 +1,4 @@
+API_DOCKER_EXPORT_PORT: 3000
+API_DOCKER_NAME: "server-go"
+API_DOCKER_IMAGE: "go-go-be-server-go"
+API_DOCKER_IMAGE_TAG: "latest"

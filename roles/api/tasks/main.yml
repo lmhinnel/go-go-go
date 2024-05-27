@@ -1,0 +1,6 @@
+- name: Run server with docker
+  docker_container:
+    name: "{{ API_DOCKER_NAME }}"
+    image: "{{ API_DOCKER_IMAGE }}"
+    ports:
+      - "{{ API_DOCKER_EXPORT_PORT }}:3000"

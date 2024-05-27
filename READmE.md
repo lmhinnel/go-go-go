@@ -25,6 +25,6 @@ docker-compose up -d
 
 ```bash
 vagrant up
-ansible-playbook playbook.yml
+ansible-playbook intro-playbook.yml
 ```
 

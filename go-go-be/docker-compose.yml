@@ -8,13 +8,15 @@ services:
       dockerfile: dockerfile.postgres
     ports:
       - 5433:5432
+    labels:
+      kompose.service.type: nodeport
     volumes:
       - pgdata:/var/lib/postgresql/data
-    environment:
-      - SEED=${SEED}
+    # environment:
+      # - SEED=${SEED}
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
-      interval: 10s
+      interval: 1s
       timeout: 5s
       retries: 5
 
@@ -25,9 +27,11 @@ services:
       context: .
       dockerfile: dockerfile.server
     ports:
-      - 3000:3000
-    depends_on:
-      postgres-go:
-        condition: service_healthy
+      - 0.0.0.0:3000:3000
+    labels:
+      kompose.service.type: nodeport
+    # depends_on:
+    #   - postgres-go
+        # condition: service_healthy
 volumes:
   pgdata:

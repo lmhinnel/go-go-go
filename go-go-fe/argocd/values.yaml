@@ -1,0 +1,14 @@
+appName: fe
+
+port: 8081
+
+namespace: go-go
+
+configmap:
+  name: fe
+  data:
+    CUSTOM_HEADER: "This app was deployed with helm!"
+
+imageFe:
+  name: lmhinnoc/vdt-fe
+  tag: latest

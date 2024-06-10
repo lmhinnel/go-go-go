@@ -1007,3 +1007,179 @@
 2024-05-25 17:24:02,010 p=177705 u=lmhinnoc n=ansible | PLAY RECAP **********************************************************************************************************
 2024-05-25 17:24:02,010 p=177705 u=lmhinnoc n=ansible | go_go_1                    : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2024-05-25 17:24:02,010 p=177705 u=lmhinnoc n=ansible | go_go_2                    : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-06-08 00:45:53,729 p=413717 u=lmhinnoc n=ansible | PLAY [Setup project] ***********************************************************
+2024-06-08 00:45:53,733 p=413717 u=lmhinnoc n=ansible | TASK [common : Ensure docker service is running] *******************************
+2024-06-08 00:45:54,768 p=413717 u=lmhinnoc n=ansible | ok: [go_go_1]
+2024-06-08 00:45:54,869 p=413717 u=lmhinnoc n=ansible | ok: [go_go_2]
+2024-06-08 00:45:54,871 p=413717 u=lmhinnoc n=ansible | TASK [common : Copy src] *******************************************************
+2024-06-08 00:45:55,337 p=413717 u=lmhinnoc n=ansible | changed: [go_go_1] => (item=go-go-be)
+2024-06-08 00:45:55,354 p=413717 u=lmhinnoc n=ansible | changed: [go_go_2] => (item=go-go-be)
+2024-06-08 00:45:55,906 p=413717 u=lmhinnoc n=ansible | changed: [go_go_1] => (item=go-go-fe)
+2024-06-08 00:46:01,226 p=413717 u=lmhinnoc n=ansible | changed: [go_go_2] => (item=go-go-fe)
+2024-06-08 00:46:01,316 p=413717 u=lmhinnoc n=ansible | PLAY [Start DB] ****************************************************************
+2024-06-08 00:46:01,320 p=413717 u=lmhinnoc n=ansible | TASK [db : Run DB with docker] *************************************************
+2024-06-08 00:46:01,862 p=413717 u=lmhinnoc n=ansible | ok: [go_go_1]
+2024-06-08 00:46:02,721 p=413717 u=lmhinnoc n=ansible | changed: [go_go_2]
+2024-06-08 00:46:02,726 p=413717 u=lmhinnoc n=ansible | PLAY [Start API] ***************************************************************
+2024-06-08 00:46:02,729 p=413717 u=lmhinnoc n=ansible | TASK [api : Run server with docker] ********************************************
+2024-06-08 00:46:03,097 p=413717 u=lmhinnoc n=ansible | ok: [go_go_1]
+2024-06-08 00:46:03,107 p=413717 u=lmhinnoc n=ansible | ok: [go_go_2]
+2024-06-08 00:46:03,119 p=413717 u=lmhinnoc n=ansible | PLAY [Start FE] ****************************************************************
+2024-06-08 00:46:03,124 p=413717 u=lmhinnoc n=ansible | TASK [fe : Run fe with docker] *************************************************
+2024-06-08 00:46:04,282 p=413717 u=lmhinnoc n=ansible | changed: [go_go_2]
+2024-06-08 00:46:08,561 p=413717 u=lmhinnoc n=ansible | fatal: [go_go_1]: FAILED! => {"changed": false, "msg": "Error pulling image go-go-fe-web:latest - 404 Client Error for http+docker://localhost/v1.43/images/create?tag=latest&fromImage=go-go-fe-web: Not Found (\"pull access denied for go-go-fe-web, repository does not exist or may require 'docker login': denied: requested access to the resource is denied\")"}
+2024-06-08 00:46:08,565 p=413717 u=lmhinnoc n=ansible | PLAY RECAP *********************************************************************
+2024-06-08 00:46:08,565 p=413717 u=lmhinnoc n=ansible | go_go_1                    : ok=4    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-08 00:46:08,565 p=413717 u=lmhinnoc n=ansible | go_go_2                    : ok=5    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-06-08 00:51:31,844 p=422097 u=lmhinnoc n=ansible | PLAY [Setup project] ***********************************************************
+2024-06-08 00:51:31,849 p=422097 u=lmhinnoc n=ansible | TASK [common : Ensure docker service is running] *******************************
+2024-06-08 00:51:33,021 p=422097 u=lmhinnoc n=ansible | ok: [go_go_1]
+2024-06-08 00:51:33,300 p=422097 u=lmhinnoc n=ansible | ok: [go_go_2]
+2024-06-08 00:51:33,303 p=422097 u=lmhinnoc n=ansible | TASK [common : Copy src] *******************************************************
+2024-06-08 00:51:33,776 p=422097 u=lmhinnoc n=ansible | changed: [go_go_1] => (item=go-go-be)
+2024-06-08 00:51:33,777 p=422097 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-be)
+2024-06-08 00:51:34,832 p=422097 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-fe)
+2024-06-08 00:51:39,262 p=422097 u=lmhinnoc n=ansible | changed: [go_go_1] => (item=go-go-fe)
+2024-06-08 00:51:39,333 p=422097 u=lmhinnoc n=ansible | PLAY [Start project] ***********************************************************
+2024-06-08 00:51:39,339 p=422097 u=lmhinnoc n=ansible | TASK [docker-compose : Run services with docker compose] ***********************
+2024-06-08 00:51:42,974 p=422097 u=lmhinnoc n=ansible |  [ERROR]: User interrupted execution
+
+2024-06-08 00:58:37,941 p=431573 u=lmhinnoc n=ansible | PLAY [Setup project] ***********************************************************************************************************************************************************
+2024-06-08 00:58:37,949 p=431573 u=lmhinnoc n=ansible | TASK [common : Ensure docker service is running] *******************************************************************************************************************************
+2024-06-08 00:58:39,778 p=431573 u=lmhinnoc n=ansible | ok: [go_go_2]
+2024-06-08 00:58:40,353 p=431573 u=lmhinnoc n=ansible | ok: [go_go_1]
+2024-06-08 00:58:40,355 p=431573 u=lmhinnoc n=ansible | TASK [common : Copy src] *******************************************************************************************************************************************************
+2024-06-08 00:58:41,062 p=431573 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-be)
+2024-06-08 00:58:41,502 p=431573 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-be)
+2024-06-08 00:58:41,985 p=431573 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-fe)
+2024-06-08 00:58:43,040 p=431573 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-fe)
+2024-06-08 00:58:43,048 p=431573 u=lmhinnoc n=ansible | PLAY [Start project] ***********************************************************************************************************************************************************
+2024-06-08 00:58:43,053 p=431573 u=lmhinnoc n=ansible | TASK [docker-compose : Run services with docker compose] ***********************************************************************************************************************
+2024-06-08 00:58:48,595 p=431573 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-be)
+2024-06-08 00:59:20,683 p=431573 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-fe)
+2024-06-08 00:59:20,686 p=431573 u=lmhinnoc n=ansible | [WARNING]: The "SEED" variable is not set. Defaulting to a blank string.
+
+2024-06-08 01:02:35,974 p=431573 u=lmhinnoc n=ansible |  [ERROR]: User interrupted execution
+
+2024-06-08 01:02:38,394 p=436784 u=lmhinnoc n=ansible | PLAY [Setup project] ***********************************************************
+2024-06-08 01:02:38,401 p=436784 u=lmhinnoc n=ansible | TASK [common : Ensure docker service is running] *******************************
+2024-06-08 01:02:39,997 p=436784 u=lmhinnoc n=ansible | ok: [go_go_1]
+2024-06-08 01:02:40,564 p=436784 u=lmhinnoc n=ansible | ok: [go_go_2]
+2024-06-08 01:02:40,566 p=436784 u=lmhinnoc n=ansible | TASK [common : Copy src] *******************************************************
+2024-06-08 01:02:41,101 p=436784 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-be)
+2024-06-08 01:02:41,681 p=436784 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-be)
+2024-06-08 01:02:42,193 p=436784 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-fe)
+2024-06-08 01:02:43,140 p=436784 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-fe)
+2024-06-08 01:02:43,154 p=436784 u=lmhinnoc n=ansible | PLAY [Start project] ***********************************************************
+2024-06-08 01:02:43,161 p=436784 u=lmhinnoc n=ansible | TASK [docker-compose : Run services with docker compose] ***********************
+2024-06-08 01:02:44,344 p=436784 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-be)
+2024-06-08 01:02:45,839 p=436784 u=lmhinnoc n=ansible | changed: [go_go_1] => (item=go-go-fe)
+2024-06-08 01:02:45,840 p=436784 u=lmhinnoc n=ansible | [WARNING]: The "SEED" variable is not set. Defaulting to a blank string.
+
+2024-06-08 01:04:26,996 p=436784 u=lmhinnoc n=ansible |  [ERROR]: User interrupted execution
+
+2024-06-08 01:04:28,087 p=439726 u=lmhinnoc n=ansible | PLAY [Setup project] ***********************************************************
+2024-06-08 01:04:28,092 p=439726 u=lmhinnoc n=ansible | TASK [common : Ensure docker service is running] *******************************
+2024-06-08 01:04:29,165 p=439726 u=lmhinnoc n=ansible | ok: [go_go_2]
+2024-06-08 01:04:31,132 p=439726 u=lmhinnoc n=ansible | ok: [go_go_1]
+2024-06-08 01:04:31,135 p=439726 u=lmhinnoc n=ansible | TASK [common : Copy src] *******************************************************
+2024-06-08 01:04:31,844 p=439726 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-be)
+2024-06-08 01:04:32,623 p=439726 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-be)
+2024-06-08 01:04:33,041 p=439726 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-fe)
+2024-06-08 01:04:35,632 p=439726 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-fe)
+2024-06-08 01:04:35,638 p=439726 u=lmhinnoc n=ansible | PLAY [Start project] ***********************************************************
+2024-06-08 01:04:35,641 p=439726 u=lmhinnoc n=ansible | TASK [docker-compose : Run services with docker compose] ***********************
+2024-06-08 01:04:43,653 p=439726 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-be)
+2024-06-08 01:04:48,576 p=439726 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-fe)
+2024-06-08 01:04:48,578 p=439726 u=lmhinnoc n=ansible | [WARNING]: The "SEED" variable is not set. Defaulting to a blank string.
+
+2024-06-08 01:08:05,910 p=439726 u=lmhinnoc n=ansible |  [ERROR]: User interrupted execution
+
+2024-06-08 01:08:07,109 p=445300 u=lmhinnoc n=ansible | PLAY [Setup project] ***************************************************************
+2024-06-08 01:08:07,113 p=445300 u=lmhinnoc n=ansible | TASK [common : Ensure docker service is running] ***********************************
+2024-06-08 01:08:08,050 p=445300 u=lmhinnoc n=ansible | ok: [go_go_2]
+2024-06-08 01:08:08,614 p=445300 u=lmhinnoc n=ansible | ok: [go_go_1]
+2024-06-08 01:08:08,617 p=445300 u=lmhinnoc n=ansible | TASK [common : Copy src] ***********************************************************
+2024-06-08 01:08:09,156 p=445300 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-be)
+2024-06-08 01:08:09,280 p=445300 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-be)
+2024-06-08 01:08:10,090 p=445300 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-fe)
+2024-06-08 01:08:10,357 p=445300 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-fe)
+2024-06-08 01:08:10,367 p=445300 u=lmhinnoc n=ansible | PLAY [Start project] ***************************************************************
+2024-06-08 01:08:10,374 p=445300 u=lmhinnoc n=ansible | TASK [docker-compose : Run services with docker compose] ***************************
+2024-06-08 01:08:14,473 p=445300 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-be)
+2024-06-08 01:08:17,277 p=445300 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-fe)
+2024-06-08 01:08:17,279 p=445300 u=lmhinnoc n=ansible | [WARNING]: The "SEED" variable is not set. Defaulting to a blank string.
+
+2024-06-08 01:12:20,697 p=445300 u=lmhinnoc n=ansible |  [ERROR]: User interrupted execution
+
+2024-06-08 08:14:29,086 p=23470 u=lmhinnoc n=ansible | PLAY [Setup project] **************************************************************************************************************************************************
+2024-06-08 08:14:29,091 p=23470 u=lmhinnoc n=ansible | TASK [common : Ensure docker service is running] **********************************************************************************************************************
+2024-06-08 08:14:30,187 p=23470 u=lmhinnoc n=ansible | ok: [go_go_1]
+2024-06-08 08:14:30,196 p=23470 u=lmhinnoc n=ansible | ok: [go_go_2]
+2024-06-08 08:14:30,200 p=23470 u=lmhinnoc n=ansible | TASK [common : Copy src] **********************************************************************************************************************************************
+2024-06-08 08:14:30,704 p=23470 u=lmhinnoc n=ansible | changed: [go_go_2] => (item=go-go-be)
+2024-06-08 08:14:30,706 p=23470 u=lmhinnoc n=ansible | changed: [go_go_1] => (item=go-go-be)
+2024-06-08 08:14:40,935 p=23470 u=lmhinnoc n=ansible | changed: [go_go_1] => (item=go-go-fe)
+2024-06-08 08:14:40,995 p=23470 u=lmhinnoc n=ansible | changed: [go_go_2] => (item=go-go-fe)
+2024-06-08 08:14:41,116 p=23470 u=lmhinnoc n=ansible | PLAY [Start project] **************************************************************************************************************************************************
+2024-06-08 08:14:41,120 p=23470 u=lmhinnoc n=ansible | TASK [docker-compose : Run services with docker compose] **************************************************************************************************************
+2024-06-08 08:14:47,787 p=23470 u=lmhinnoc n=ansible |  [ERROR]: User interrupted execution
+
+2024-06-08 08:20:26,034 p=32962 u=lmhinnoc n=ansible | PLAY [Setup project] ***********************************************************************************************************************************************************
+2024-06-08 08:20:26,039 p=32962 u=lmhinnoc n=ansible | TASK [common : Ensure docker service is running] *******************************************************************************************************************************
+2024-06-08 08:20:27,540 p=32962 u=lmhinnoc n=ansible | ok: [go_go_2]
+2024-06-08 08:20:27,542 p=32962 u=lmhinnoc n=ansible | ok: [go_go_1]
+2024-06-08 08:20:27,544 p=32962 u=lmhinnoc n=ansible | TASK [common : Copy src] *******************************************************************************************************************************************************
+2024-06-08 08:20:28,082 p=32962 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-be)
+2024-06-08 08:20:28,096 p=32962 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-be)
+2024-06-08 08:20:29,008 p=32962 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-fe)
+2024-06-08 08:20:29,010 p=32962 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-fe)
+2024-06-08 08:20:29,017 p=32962 u=lmhinnoc n=ansible | PLAY [Start project] ***********************************************************************************************************************************************************
+2024-06-08 08:20:29,023 p=32962 u=lmhinnoc n=ansible | TASK [docker-compose : Run services with docker compose] ***********************************************************************************************************************
+2024-06-08 08:20:30,681 p=32962 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-be)
+2024-06-08 08:20:30,822 p=32962 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-be)
+2024-06-08 08:20:31,878 p=32962 u=lmhinnoc n=ansible | changed: [go_go_2] => (item=go-go-fe)
+2024-06-08 08:20:31,879 p=32962 u=lmhinnoc n=ansible | [WARNING]: The "SEED" variable is not set. Defaulting to a blank string.
+
+2024-06-08 08:20:32,005 p=32962 u=lmhinnoc n=ansible | changed: [go_go_1] => (item=go-go-fe)
+2024-06-08 08:20:32,008 p=32962 u=lmhinnoc n=ansible | TASK [docker-compose : Assert services are running] ****************************************************************************************************************************
+2024-06-08 08:20:32,019 p=32962 u=lmhinnoc n=ansible | ok: [go_go_2] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+2024-06-08 08:20:32,023 p=32962 u=lmhinnoc n=ansible | ok: [go_go_1] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+2024-06-08 08:20:32,028 p=32962 u=lmhinnoc n=ansible | PLAY RECAP *********************************************************************************************************************************************************************
+2024-06-08 08:20:32,028 p=32962 u=lmhinnoc n=ansible | go_go_1                    : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-06-08 08:20:32,028 p=32962 u=lmhinnoc n=ansible | go_go_2                    : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-06-08 08:20:35,618 p=33398 u=lmhinnoc n=ansible | PLAY [Setup project] ***********************************************************************************************************************************************************
+2024-06-08 08:20:35,627 p=33398 u=lmhinnoc n=ansible | TASK [common : Ensure docker service is running] *******************************************************************************************************************************
+2024-06-08 08:20:36,990 p=33398 u=lmhinnoc n=ansible | ok: [go_go_2]
+2024-06-08 08:20:37,054 p=33398 u=lmhinnoc n=ansible | ok: [go_go_1]
+2024-06-08 08:20:37,058 p=33398 u=lmhinnoc n=ansible | TASK [common : Copy src] *******************************************************************************************************************************************************
+2024-06-08 08:20:37,575 p=33398 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-be)
+2024-06-08 08:20:38,131 p=33398 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-be)
+2024-06-08 08:20:38,375 p=33398 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-fe)
+2024-06-08 08:20:39,240 p=33398 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-fe)
+2024-06-08 08:20:39,253 p=33398 u=lmhinnoc n=ansible | PLAY [Start project] ***********************************************************************************************************************************************************
+2024-06-08 08:20:39,262 p=33398 u=lmhinnoc n=ansible | TASK [docker-compose : Run services with docker compose] ***********************************************************************************************************************
+2024-06-08 08:20:41,450 p=33398 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-be)
+2024-06-08 08:20:41,633 p=33398 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-be)
+2024-06-08 08:20:42,929 p=33398 u=lmhinnoc n=ansible | ok: [go_go_1] => (item=go-go-fe)
+2024-06-08 08:20:42,930 p=33398 u=lmhinnoc n=ansible | [WARNING]: The "SEED" variable is not set. Defaulting to a blank string.
+
+2024-06-08 08:20:43,416 p=33398 u=lmhinnoc n=ansible | ok: [go_go_2] => (item=go-go-fe)
+2024-06-08 08:20:43,421 p=33398 u=lmhinnoc n=ansible | TASK [docker-compose : Assert services are running] ****************************************************************************************************************************
+2024-06-08 08:20:43,441 p=33398 u=lmhinnoc n=ansible | ok: [go_go_2] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+2024-06-08 08:20:43,444 p=33398 u=lmhinnoc n=ansible | ok: [go_go_1] => {
+    "changed": false,
+    "msg": "All assertions passed"
+}
+2024-06-08 08:20:43,452 p=33398 u=lmhinnoc n=ansible | PLAY RECAP *********************************************************************************************************************************************************************
+2024-06-08 08:20:43,452 p=33398 u=lmhinnoc n=ansible | go_go_1                    : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-06-08 08:20:43,452 p=33398 u=lmhinnoc n=ansible | go_go_2                    : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

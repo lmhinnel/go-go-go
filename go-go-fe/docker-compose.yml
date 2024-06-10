@@ -8,3 +8,5 @@ services:
     volumes:
       - ./.:/project
       - /project/node_modules
+    labels:
+      kompose.service.type: nodeport

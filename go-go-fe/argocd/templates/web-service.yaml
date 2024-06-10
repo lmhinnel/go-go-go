@@ -3,12 +3,12 @@ kind: Service
 metadata:
   annotations:
     kompose.cmd: kompose convert -f ../../docker-compose.yml
+    kompose.service.type: nodeport
     kompose.version: 1.26.0 (40646f47)
   creationTimestamp: null
   labels:
     io.kompose.service: web
   name: web
-  namespace: {{ .Values.namespace }}
 spec:
   ports:
     - name: "8081"
@@ -16,5 +16,6 @@ spec:
       targetPort: 8080
   selector:
     io.kompose.service: web
+  type: NodePort
 status:
   loadBalancer: {}

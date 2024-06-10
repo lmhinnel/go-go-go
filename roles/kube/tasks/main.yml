@@ -1,0 +1,44 @@
+- name: Update package lists
+  apt: update_cache=yes cache_valid_time=3600
+
+- name: Add Kubernetes repository key
+  copy:
+    content: "{{ lookup('url', 'https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key') }}"
+    dest: /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+    mode: 0644
+
+- name: Add Kubernetes repository list
+  lineinfile:
+    path: /etc/apt/sources.list.d/kubernetes.list
+    create: yes
+    line: "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /"
+    state: present
+
+- name: Update package lists after adding repository
+  apt: update_cache=yes
+
+- name: Install kubelet, kubeadm, and kubectl
+  apt:
+    name:
+      - kubelet
+      - kubeadm
+      - kubectl
+    state: present
+
+- name: Hold kubelet, kubeadm, and kubectl packages
+  apt:
+    name:
+      - kubelet
+      - kubeadm
+      - kubectl
+    state: hold
+  when: hold_kube_packages | default(true)
+
+- name: Enable and start kubelet service
+  systemd:
+    name: kubelet
+    enabled: yes
+    state: started
+
+- name: Disable swap
+  command: swapoff -a
